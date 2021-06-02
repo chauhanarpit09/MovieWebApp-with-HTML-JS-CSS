@@ -318,11 +318,19 @@ body {
     .searchresult div {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    .banner {
+        height:50vh;
+    }
+
+     .bannercontent {
+        height: 50vh
+    }
 }
 
 @media (max-width: 900px) {
     .searchresult div {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .banner {
