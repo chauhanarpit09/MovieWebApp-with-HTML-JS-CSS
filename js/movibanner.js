@@ -61,11 +61,11 @@ async function fetchdata(url) {
             });
         }
 
-
+        const rating = d?.vote_average*10;
         document.getElementById('posterimg').src = `${baseimageurl}${d?.poster_path}`
         document.getElementById('title').innerHTML += `${d?.original_title || d?.name || d?.title}`
         document.getElementById('chartvalue').innerHTML += `${d?.vote_average*10}%`
-        document.getElementById("chart").setAttribute("data-percent", `${d?.vote_average*10}`);
+        document.getElementById("chart").setAttribute("data-percent", `${rating}`);
         d?.genres.forEach(getallgenere);
         if(d.tagline) {
              document.getElementById('tagline').innerHTML += `${d?.tagline}`
