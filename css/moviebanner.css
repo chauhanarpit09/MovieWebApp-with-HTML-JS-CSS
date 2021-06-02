@@ -182,23 +182,23 @@ body {
 
 @media (max-width: 1000px) {
     .moviedata {
-        top:50px;
+        margin-top:100px;
         flex-direction: column;
     }
 
     .posterimg {
        flex:1;
-       max-width: 100%;
-       max-height: 40%;
+       margin: 3rem 2rem;
+       max-width: 80%;
+       max-height: 50%;
        justify-content:flex-start;
        align-items:flex-start;
     }
 
     .posterimg img{
        flex:1;
-       max-width: 100%;
        max-height: 100%;
-       object-fit: contain;
+       object-fit: cover;
     }
 
     .movieinfo {
