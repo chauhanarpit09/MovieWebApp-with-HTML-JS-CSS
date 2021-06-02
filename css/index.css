@@ -222,6 +222,9 @@ body {
     color:White !important;
 }
 
+.onemovie {
+    border: none;
+}
 .onemovie h3, .searchresult div .search h3 {
     margin-top: 10px;
     font-weight:800vw;
