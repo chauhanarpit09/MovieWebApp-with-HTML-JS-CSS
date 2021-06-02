@@ -78,7 +78,7 @@ function sliderInit(){
                             {
                             breakpoint: 1024,
                             settings: {
-                                slidesToShow: 3,
+                                slidesToShow: 4,
                                 slidesToScroll: 3,
                                 infinite: true,
                                 dots: true
@@ -87,7 +87,7 @@ function sliderInit(){
                             {
                             breakpoint: 600,
                             settings: {
-                                slidesToShow: 2,
+                                slidesToShow: 3,
                                 slidesToScroll: 2
                             }
                             },
