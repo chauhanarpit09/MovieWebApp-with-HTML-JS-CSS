@@ -53,11 +53,11 @@ async function fetchdata(url) {
         let c = [0,0,0]
         if (img.complete) {
              c = colorThief.getColor(img);
-             document.getElementById('overlay').style.background = `rgba(${c[0]},${c[1]},${c[2]},0.7)`
+             document.getElementById('overlay').style.background = `rgba(${c[0]},${c[1]},${c[2]},0.6)`
         } else {
                 img.addEventListener('load', function() {
                 c = colorThief.getColor(img)
-                document.getElementById('overlay').style.background = `rgba(${c[0]},${c[1]},${c[2]},0.7)`
+                document.getElementById('overlay').style.background = `rgba(${c[0]},${c[1]},${c[2]},0.6)`
             });
         }
 
