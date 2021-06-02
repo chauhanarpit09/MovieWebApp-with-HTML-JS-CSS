@@ -1,0 +1,341 @@
+html {
+    font-family: sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #1a1a1a 20%, #000 100%);;
+}
+
+
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    max-height: 20vh;
+    background-color: #000;
+    position: fixed;
+    z-index: 1;
+}
+
+.leftnav {
+    margin : 0;
+    flex: 0.9;
+    display: flex;
+    max-height: 10vh;
+    
+}
+
+.leftnav .logo {
+    flex: 0.3;
+    padding: 10px;
+    margin-left: 20px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.leftnav .logo img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.leftnav .list {
+    flex: 0.7;
+    display: flex;
+    align-items: center;
+}
+
+.leftnav .list div {
+    color:#e6e6e6;
+    margin: 20px;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+
+.leftnav .list div:hover {
+    color:#fff;
+}
+
+
+.rightnav{
+    flex: 0.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightnav .menuicon {
+    cursor: pointer;
+    display: none;
+}
+
+.rightnav .menuicon div {
+    width: 35px;
+    height: 5px;
+    background-color:#fff;
+    margin: 6px 0;
+}
+
+.rightnav .menuicon .menuiconline2 {
+    width: 30px;
+}
+
+
+.banner {
+    position: relative;
+    max-width: 100vw;
+    height:100vh;
+}
+
+.bannerimage {
+    height:100%;
+    width: 100%;
+    top: 50px;
+    position: absolute;
+}
+.bannerimage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.bannerimage .img:after {
+  content: '';
+  background-image: linear-gradient(to top, rgba(239,239,239,255), rgba(239,239,239,0));
+  position: absolute;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.bannercontent {
+    position: absolute;
+    max-width: 80vw;
+    min-width: 80vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.bannercontent .content {
+    color: white;
+    font-weight:bold;
+    font-size: 2rem;
+    margin: 10px;
+
+}
+.bannercontent .content span {
+    font-size:3rem;
+}
+
+.bannercontent .search {
+    width: 82%;
+    background-color: #fff;
+    display: flex;
+    border-radius: 20px;
+}
+.bannercontent .search form {
+    width: 100%;
+    display: flex;
+}
+.bannercontent .search input {
+    flex: 0.9;
+    padding:14px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#333333;
+}
+
+.bannercontent .search button {
+    flex: 0.1;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgba(30,213,169, 1) 0%, rgba(1,180,228, 1) 100%);
+    text-decoration: none;
+
+}
+
+.bannercontent .search button:hover span{
+     color: #000;
+}
+.bannercontent .search span {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.rows {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;;
+}
+
+
+.slidercontainer{
+    display:flex;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 90%;
+}
+
+
+
+#name {
+    display: flex;
+    margin : 2rem;
+}
+#name .heading, .searchheading {
+    font-size:2em;
+    font-weight:bold;
+}
+
+.tabs {
+    margin-left: 3rem;
+    border: 2px solid green;
+    display: flex;
+    justify-content:space-evenly;
+    border-radius:20px;
+}
+
+.tabs span {
+    padding: 10px;
+    margin: 0;
+    border : none;
+    cursor: pointer;
+    border-radius:15px;
+}
+.tabs .active{
+    background-color: green;
+    color: white;
+    margin:0;
+    
+}
+
+.onemovie h3, .searchresult div .search h3 {
+    margin-top: 10px;
+    font-weight:800vw;
+    text-align: center;
+    max-height: 220px;
+    max-width: 180px;
+}
+
+.onemovie img, .searchresult div .search img {
+    border-radius: 1rem;
+    max-height: 220px;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+.searchresult {
+    margin: auto;
+    padding: 10px;
+    margin-top: 5rem;
+    display: none;
+    width: 95vw;
+    overflow: hidden;
+}
+
+
+.searchresult div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top:50px;
+}
+.searchresult div .search{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-image: radial-gradient(at 30% top, #031d33 0%, rgba(var(--tmdbDarkBlue), 1) 70%);
+}
+
+@media (max-width: 1000px) {
+    .leftnav .list  {
+        flex: 0.3;
+        display: none;
+    }
+
+    .leftnav .logo {
+        flex: 0.7;
+        margin-left: 0px;
+    }
+
+    .bannercontent .search {
+        width: 100%;
+    }
+
+    .rightnav {
+        flex:0.3
+    }
+
+    .rightnav .menuicon {
+        cursor: pointer;
+        display: block;
+    }
+
+    .bannercontent .search input {
+        flex: 0.8;
+    }
+
+    .bannercontent .search button {
+        flex: 0.2;
+    }
+}
+
+@media (max-width: 1200px) {
+    .searchresult div {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    .searchresult div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .searchresult div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .banner {
+        height:50vh;
+    }
+
+     .bannercontent {
+        height: 50vh
+    }
+}
+
+@media (max-width: 768px) {
+    .searchresult div {
+        grid-template-columns: 1fr 1fr ;
+    }
+}

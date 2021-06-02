@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie APP</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body onload="get()">
+    <div class="header">
+      <nav class="nav" onscroll="backcolor()" id="nav">
+        <div class="leftnav">
+          <div class="logo">
+            <img
+              src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+            />
+          </div>
+          <div class="list">
+            <div>Movies</div>
+            <div>TV Shows</div>
+            <div>People</div>
+            <div>More</div>
+          </div>
+        </div>
+        <div class="rightnav">
+          <div class="menuicon">
+            <div></div>
+            <div class="menuiconline2"></div>
+            <div></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="coverbanner">
+      <div class="banner">
+        <div class="bannerimage" id="bannerimage"></div>
+        <div class="bannercontent">
+          <div class="content">
+            <span>Welcome.</span><br />
+            Millions of movies, TV shows and people to discover.Explore now.
+          </div>
+          <div class="search">
+            <input
+              placeholder="Seacrh for a movie, tv show..."
+              value=""
+              id="search"
+            />
+            <a style="text-decoration:none" href = "#searchResult" ><button onClick="search()" id="searchButton">
+              <span>Search</span></a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="searchresult" id="searchResult">
+      <center><span class="searchheading">Search Results</span></center>
+      <div id="seacrhresult"></div>
+    </div>
+    <div class="main" id="main">
+      <div class="rows" id="rows"></div>
+    </div>
+    <div class="footer">
+      <div>The Movie database</div>
+      <div></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js\slick.js"></script>
+    <script src="js\index.js"></script>
+  </body>
+</html>
