@@ -110,25 +110,6 @@ function sliderInit(){
 function truncate(str,n){
         return str?.length>n?str.substr(0,n-1)+"...":str;
 }
-
-
-function change(str,tabs) {
-    console.log(str,tabs)
-    var tab1 = document.getElementById(tabs.tab1);
-    var tab2 = document.getElementById(tabs.tab2);
-    if(str === tabs.tab1) {
-        
-        tab1.className = 'active';
-        tab2.className = '';
-        tab1.style.transition = 'background-color 250ms ease-in';
-    } else {
-        
-        tab1.className = '';
-        tab2.className = 'active';
-        tab2.style.transition = 'background-color 250ms ease-in';
-       
-    }
-}
 let image = '';
 function bannerimage() {
     objectLenght = Object.keys(request).length;
@@ -154,6 +135,7 @@ async function search() {
          document.getElementById('seacrhresult').innerHTML = ""
          Object.keys(d).forEach(key => {
                 document.getElementById('seacrhresult').innerHTML  += `
+                                                        <a style= text-decoration:none;color:white href="./moviebanner.html?id=${d[key]?.id}&category=${d[key].first_air_date ? 'show' : 'movie'}">
                                                         <div class="search">
                                                             <img 
                                                             src=${base_url+d[key].poster_path || base_url+d[key].backdrop_path }
@@ -162,6 +144,7 @@ async function search() {
                                                             <h3>${truncate(d[key]?.original_title,26) || truncate(d[key]?.title,26) || truncate(d[key]?.name,26) || ''}</h3>
                                                             <p></p>
                                                         </div>
+                                                        </a>
                                                         `
         });
         
@@ -187,23 +170,19 @@ async function getdata(value) {
                                                          <div class="row" id="row">
                                                             <div id="name">
                                                                 <span class="heading">${value.name}</span>
-                                                                <span class=${value?.tabs || ''}>
-                                                                    <span class=active onClick = change(${value?.tab1},) id=${value?.tab1}>${value?.tab1 || ''}</span>
-                                                                    <span onClick = change(${value?.tab2},${value})  id=${value?.tab2}>${value?.tab2 || ''}</span>
-                                                                </span>
                                                             </div>
                                                                 <div class="rowslide slider ${c}" id=${c}></div>
                                                         </div>
                                                         `
              Object.keys(d).forEach(key => {
                 document.getElementById(c).innerHTML  += `
-                                                        <div class="onemovie">
+                                                        <a style= text-decoration:none;color:white href="./moviebanner.html?id=${d[key]?.id}&category=${d[key].first_air_date ? 'show' : 'movie'}"><div class="onemovie">
                                                             <img 
                                                             src=${base_url}${d[key].poster_path}
                                                             />
                                                             <h3>${truncate(d[key]?.original_title,26) || truncate(d[key]?.title,26) ,truncate(d[key]?.name,26) || ''}</h3>
                                                             <p></p>
-                                                        </div>
+                                                        </div></a>
                                                         `
             });
             sliders[i] = {'sliderid':`.${c}`};
