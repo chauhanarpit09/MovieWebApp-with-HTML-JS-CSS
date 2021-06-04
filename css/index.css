@@ -247,6 +247,10 @@ body {
 .searchresult div .search {
     transition: transform 250ms linear;
 }
+
+.onemovie img:hover{
+    filter: blur(2.5);
+}
 .searchresult div .search:hover {
     transform: scale(1.2);
     filter: blur(2);
