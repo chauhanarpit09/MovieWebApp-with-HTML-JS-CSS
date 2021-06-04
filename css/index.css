@@ -280,6 +280,7 @@ body {
     background-color: #000;
     display: flex;
     min-height: 10rem;
+    z-index: -1;
 }
 
 @media screen and  (max-width: 1000px) {
