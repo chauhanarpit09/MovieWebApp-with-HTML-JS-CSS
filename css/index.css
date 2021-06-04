@@ -225,6 +225,7 @@ body {
 
 .onemovie {
     border: none;
+    pointer-events: none;
 }
 .onemovie h3, .searchresult div .search h3 {
     margin-top: 10px;
