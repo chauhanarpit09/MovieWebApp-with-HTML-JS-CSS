@@ -4,47 +4,37 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 
 const request = {
     Trending: {
-                url:`/trending/all/day?api_key=${APIkey}`,
+                url:`/trending/all/day?api_key=${APIkey}&with_original_language=hi`,
                 name: 'Trending Today',
-                tabs: 'tabs',
-                tab1: 'Today',
-                tab2: 'This Week'
+            },
+    fetchupcoming : {
+                url: `/movie/upcoming?api_key=${APIkey}`,
+                name: 'Latest or UpComing'
             },
     fetchpopularmovies : {
                 url:`/movie/popular?api_key=${APIkey}&page=1`,
-                name: `What's Popular`,
-                tabs: 'tabs',
-                tab1: 'Movies',
-                tab2: 'On TV'
+                name: `What's Popular`
             },
-   fetchtopratedmovies: {
-                url:`/movie/top_rated?api_key=${APIkey}&page=1`,
-                name: 'Rated Movies'
-            },
-    fetchratedshows: {
-                url:`/tv/top_rated?api_key=${APIkey}&page=1`,
-                name: 'Rated Shows'
-            },
-    fetchpopularshow: {
+    fetchpopularshows: {
                 url:`/tv/popular?api_key=${APIkey}&page=1`,
-                name: 'Popular Shows'
+                name: ``
             },
-    
-    
-    
-}
-
-const re = {
-  fetchpopularmovies: ``,
-  fetchtopratedmovies: `/movie/top_rated?api_key=${APIkey}&page=1`,
-  fetchratedshows: `/tv/top_rated?api_key=${APIkey}&page=1`,
-  fetchpopularshows: `/tv/popular?api_key=${APIkey}&page=1`,
-  fetchtvshowtrailer: `/tv/{tv_id}/similar?api_key=${APIkey}&page=1`,
-  fetchupcoming: `/movie/upcoming?api_key=${APIkey}&language=en-US&page=1`,
-  fetchpopularhindi: `/movie/popular?api_key=${APIkey}&page=1&with_original_language=hi`,
-  fetchpopulartvhindi: `/tv/popular?api_key=${APIkey}&page=1&with_original_language=hi`,
-  fetchratedhindishows: `/tv/top_rated?api_key=${APIkey}&page=1&with_original_language=hi`,
-  
+    fetchhindipopularshow: {
+                url:`/tv/popular?api_key=${APIkey}&page=1&with_original_language=hi`,
+                name: ``
+            },
+    fetchtopratedmovies: {
+                url:`/movie/top_rated?api_key=${APIkey}&page=1`,
+                name: 'Rated Movies and Shows'
+            },
+    fetchratedhindimovies: {
+                url: `/movie/top_rated?api_key=${APIkey}&page=1&with_original_language=hi`,
+                name: ''
+        },
+    fetchhindi: {
+                url:`/movie/popular?api_key=${APIkey}&page=1&with_original_language=hi`,
+                name: 'Hindi Shows and Movies'
+            }    
 }
 
 

@@ -223,10 +223,7 @@ body {
     color:White !important;
 }
 
-.onemovie {
-    border: none;
-    pointer-events: none;
-}
+
 .onemovie h3, .searchresult div .search h3 {
     margin-top: 10px;
     font-weight:800vw;
@@ -249,7 +246,7 @@ body {
 }
 
 .onemovie img:hover{
-    filter: blur(100px);
+    filter: blur(8px);
 }
 .searchresult div .search:hover {
     transform: scale(1.2);
@@ -325,6 +322,11 @@ body {
 @media screen and  (max-width: 1000px) {
     .searchresult div {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .onemovie {
+        border: none;
+        pointer-events: none;
     }
 
     .banner {
