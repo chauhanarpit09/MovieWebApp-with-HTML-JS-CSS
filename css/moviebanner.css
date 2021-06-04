@@ -76,14 +76,17 @@ body {
 .movieinfo .movieinfo3{
     flex:1;
 }
-
+.movieinfo .movieinfo1 {    
+    padding: 1rem;
+}
 .movieinfo .movieinfo1 #title {
-    font-size:65px;
+    font-size:60px;
     font-weight: bold;
+    
 }
 
 .movieinfo .movieinfo1 #genre {
-    font-size:16px;
+    font-size:1.5rem;
 }
 
 .movieinfo .movieinfo2 {
@@ -150,7 +153,6 @@ body {
 .movieinfo .movieinfo2 .playtrailer:hover{
     color:  #cccccc;
 }
-
 
 .movieinfo .movieinfo3 {
     display: flex;
@@ -222,14 +224,17 @@ body {
 
 @media screen and  (max-width: 1000px) {
     .moviedata {
-        margin-top:100px;
+        margin-top:3rem;
         flex-direction: column;
+        width: 100%;
     }
+
+    
 
     .posterimg {
        flex:1;
-       margin: 3rem 2rem;
-       max-width: 80%;
+       margin: 7rem 0;
+       max-width: 100%;
        max-height: 50%;
        justify-content:center;
        align-items:center;
@@ -245,8 +250,27 @@ body {
         flex:1;
         margin: 10px;  
     }
+
+    .movieinfo .movieinfo1{
+        margin: 2rem 0;
+    }
+    .movieinfo .movieinfo1{
+        margin: 2rem 0;
+        padding: 1rem;
+    }
+
+    .movieinfo .movieinfo1 #genre {
+        font-size:2rem;
+    }
     .movieinfo .movieinfo2 div{
         margin: 1rem 1rem;
-}
+    }
+
+
+    .overview div #overviewinfo{
+        font-size: 2rem;
+    }
+
+
 
 }

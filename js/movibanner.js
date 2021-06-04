@@ -23,7 +23,9 @@ function get() {
     } else {
         fetchdata(request.gettvdetails);
         fetchtrailerurl(request.gettrailertv);
-    }
+    } 
+
+    
 
 }
 
@@ -84,6 +86,7 @@ async function fetchtrailerurl(url){
     for (i = 0; i < d.length; i++) {
         if(d[i].type === 'Trailer' && d[i],name === "Official Trailer") {
             trailerid = d[i].key;
+            document.getElementById('trailerbutton').style.visibility = "visible";
             break;
         } else if(d[i].type === 'Trailer'){
             trailerid = d[i].key;
@@ -115,8 +118,10 @@ function makechart(barcolor, trackcolor) {
 
 
 function showtrailer() {
-    document.getElementById('trailer').src = `https://www.youtube.com/embed/${trailerid}?autoplay=1`
-    document.getElementById('trailerbox').style.display = "flex";
+    if(trailerid) {
+        document.getElementById('trailer').src = `https://www.youtube.com/embed/${trailerid}?autoplay=1`
+        document.getElementById('trailerbox').style.display = "flex";
+    }
 }
 
 function hidetrailer() {
