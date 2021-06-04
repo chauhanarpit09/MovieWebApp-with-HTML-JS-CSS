@@ -1,13 +1,15 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    background: black;
 }
 
 .background {
     width: 100vw;
     height: 100vh;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .background img {
    width: 100vw;
@@ -22,6 +24,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    background : rgba(0,0,0,0.6);
 
 }
 
@@ -69,14 +72,9 @@ body {
     max-height:70vh;
 }
 
-.movieinfo .movieinfo1{
-    flex:0.2;
-}
-.movieinfo .movieinfo2{
-    flex:0.3;
-}
+
 .movieinfo .movieinfo3{
-    flex:0.5;
+    flex:1;
 }
 
 .movieinfo .movieinfo1 #title {
@@ -157,6 +155,7 @@ body {
 .movieinfo .movieinfo3 {
     display: flex;
     flex-direction: column;
+    margin-top:2rem;
    
 }
 
@@ -179,6 +178,47 @@ body {
     font-size: 15px;
     color: #d9d9d9;
 }
+
+.trailer {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+}
+.trailer span{
+    padding-top: 5rem;
+    padding-bottom:  1rem;
+    display:flex;
+    justify-content:flex-end;
+    width: 90%;
+}
+
+.trailer button{
+    background-color: transparent;
+    border: none;
+    color: rgb(217, 83, 79);
+    cursor: pointer;
+    font-size:2rem;
+}
+
+.trailer button:hover{
+    color: #d1332e;
+}
+
+
+.trailer iframe {
+    padding-bottom: 5rem;
+    height: 70vh;
+    max-height:100%;
+    max-width:100%;
+    object-fit: contain;
+    border: none;
+}
+
+
 
 @media screen and  (max-width: 1000px) {
     .moviedata {

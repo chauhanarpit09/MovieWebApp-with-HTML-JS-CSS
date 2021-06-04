@@ -3,17 +3,9 @@
 let id='';
 let category='';
 let request = '';
+let trailerid ='';
 const baseurl = 'https://api.themoviedb.org/3';
 const baseimageurl = 'https://image.tmdb.org/t/p/original/'
-
-
-
-
-
-   
-
-
-
 function get() {
     var parameters = new URLSearchParams( window.location.search );
     var id = parameters.get( "id" )
@@ -21,13 +13,16 @@ function get() {
     request = {
         getmoviedetails: `/movie/${id}?api_key=d2ae966b0bae2a9f7dbc2a38133cb0f8&language=en-US`,
         gettvdetails: `/tv/${id}?api_key=d2ae966b0bae2a9f7dbc2a38133cb0f8&language=en-US`,
+        
         gettrailertv: `/tv/${id}/videos?api_key=d2ae966b0bae2a9f7dbc2a38133cb0f8`,
-        gettrailermovie: `/movie/${id}/videos?api_key=d2ae966b0bae2a9f7dbc2a38133cb0f8`
+        gettrailermovie: `/movie/${id}/videos?api_key=d2ae966b0bae2a9f7dbc2a38133cb0f8&language=en-US`
     }
     if(category === 'movie') {
         fetchdata(request.getmoviedetails);
+        fetchtrailerurl(request.gettrailermovie);
     } else {
         fetchdata(request.gettvdetails);
+        fetchtrailerurl(request.gettrailertv);
     }
 
 }
@@ -43,8 +38,6 @@ async function fetchdata(url) {
 			}).then((data)=>{
 				d = data;
 		})
-        
-           console.log(d)
        
         document.getElementById('backgroundimage').src = `${baseimageurl}${d?.backdrop_path}`;
         const colorThief = new ColorThief();
@@ -80,6 +73,26 @@ async function fetchdata(url) {
             makechart("#009933","#004d1a");
 }
 
+async function fetchtrailerurl(url){
+    let d = '';
+    url = baseurl + url;
+    await fetch(url).then((response)=>{
+			return response.json();
+		}).then((data)=>{
+			d = data.results;
+	})
+    for (i = 0; i < d.length; i++) {
+        if(d[i].type === 'Trailer' && d[i],name === "Official Trailer") {
+            trailerid = d[i].key;
+            break;
+        } else if(d[i].type === 'Trailer'){
+            trailerid = d[i].key;
+            break;
+        }
+            
+    }
+}
+
 function getallgenere(item, index) {
   document.getElementById("genre").innerHTML +=  item.name + ", " ; 
 }
@@ -97,4 +110,16 @@ function makechart(barcolor, trackcolor) {
             lineWidth: 10,
             });
         });
+}
+
+
+
+function showtrailer() {
+    document.getElementById('trailer').src = `https://www.youtube.com/embed/${trailerid}?autoplay=1`
+    document.getElementById('trailerbox').style.display = "flex";
+}
+
+function hidetrailer() {
+    document.getElementById('trailer').src = ""
+    document.getElementById('trailerbox').style.display = "none";
 }
