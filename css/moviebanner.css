@@ -220,6 +220,34 @@ body {
     border: none;
 }
 
+.notrailer{
+    margin:10px auto;
+    min-width: 30vw;
+    position: absolute;
+    z-index:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding:20px;
+    top:100px ;
+    color: white;
+    background-color: red;
+    margin-left: -34vw;
+    transition: all 250ms;
+    
+}
+.footer {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    min-height: 10rem;
+    z-index: -1;
+}
 
 
 @media screen and  (max-width: 1000px) {

@@ -121,6 +121,9 @@ function showtrailer() {
     if(trailerid) {
         document.getElementById('trailer').src = `https://www.youtube.com/embed/${trailerid}?autoplay=1`
         document.getElementById('trailerbox').style.display = "flex";
+    } else {
+        document.getElementById('notrailer').innerHTML = "<span>No Trailer Available</span>";
+        document.getElementById('notrailer').style.marginLeft = "0vw";
     }
 }
 

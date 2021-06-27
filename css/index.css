@@ -246,11 +246,10 @@ body {
 }
 
 .onemovie img:hover{
-    filter: blur(8px);
+  transform : scale(1.1);
 }
 .searchresult div .search:hover {
-    transform: scale(1.2);
-    filter: blur(2);
+    transform: scale(1.1);
     border-radius: 0px;
 }
 .searchresult {
@@ -276,6 +275,10 @@ body {
 .footer {
     background-color: #000;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
     min-height: 10rem;
     z-index: -1;
 }

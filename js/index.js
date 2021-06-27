@@ -112,6 +112,7 @@ function bannerimage() {
 
 async function search() {
     let v = document.getElementById("search").value;
+    document.getElementById("search").value = "";
     if(v !== '') {
         document.getElementById('searchResult').style.display='block';
         let d= ''
